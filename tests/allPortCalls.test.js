@@ -11,4 +11,26 @@ describe('testing to get all port calls', () => {
 				done(err);
 			});
 	});
+	test('should return an error when no imo is used', (done) => {
+		allPortCalls()
+			.then((data) => {
+				done();
+			})
+			.catch((err) => {
+				expect(err).toBeTruthy();
+				expect(err.response.status).toBe(404);
+				done();
+			});
+	});
+	test('should return an error when an invalid imo is used', (done) => {
+		allPortCalls(546544465)
+			.then((data) => {
+				done();
+			})
+			.catch((err) => {
+				expect(err).toBeTruthy();
+				expect(err.response.status).toBe(404);
+				done();
+			});
+	});
 });

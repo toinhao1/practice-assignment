@@ -16,17 +16,17 @@ const topPorts = async () => {
 		})
 	);
 
-	let topSortedPorts = Object.entries(topFivePorts)
+	let [...topSortedPorts] = Object.entries(topFivePorts)
 		.sort((a, b) => b[1] - a[1])
 		.slice(0, 5);
 
-	let lowSortedPorts = Object.entries(topFivePorts)
+	let [...lowSortedPorts] = Object.entries(topFivePorts)
 		.sort((a, b) => a[1] - b[1])
 		.slice(0, 5);
 
 	console.log('The Top', topSortedPorts);
 	console.log('The Low', lowSortedPorts);
-	return lowSortedPorts;
+	return 'Success!';
 };
 
 module.exports = topPorts;
