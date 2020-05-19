@@ -1,0 +1,22 @@
+{
+	"name": "port-chain",
+	"version": "1.0.0",
+	"description": "take home assignment for portchain",
+	"main": "src/index.js",
+	"scripts": {
+		"start": "node src/index.js",
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "porttakehome"
+	},
+	"author": "Anthony Silveira",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.19.2"
+	},
+	"devDependencies": {
+		"jest": "^26.0.1"
+	}
+}
